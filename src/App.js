@@ -12,6 +12,10 @@ import EventBind from './components/EventBind';
 import ParentComponent from './components/ParentComponent';
 import UserGreeting from './components/UserGreeting';
 import NameList from './components/NameList';
+import Style from './components/Style';
+import Inline from './components/Inline';
+import './components/appStyles.css';
+import styles from './components/appStyles.module.css'
 
 class App extends Component{
   render(){
@@ -35,6 +39,10 @@ class App extends Component{
         <ParentComponent/>
         <UserGreeting/>
         <NameList/>
+        <Style primary={true}/>
+        <Inline/> 
+        <h1 className='error'>Error</h1>
+        <h1 className={styles.success}>Success</h1>
       </div>
     );
   }
